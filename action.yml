@@ -1,0 +1,38 @@
+name: 'ActionsHub-Rubocop'
+author: 'Jason Field'
+description: 'Run rubocop on your code'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'alert-octagon'
+  color: 'green'
+inputs:
+  rubocopGemName:
+    description: 'Name of the gem to install'
+    required: false
+    default: 'rubocop'
+  rubocopGemVersion:
+    description: 'Version of the gem to install'
+    required: false
+    default: 'latest'
+  severityFatalLevel:
+    description: 'The level at which to report any results at, warning or error'
+    required: false
+    default: 'error'
+  severityErrorLevel:
+    description: 'The level at which to report any results at, warning or error'
+    required: false
+    default: 'error'
+  severityWarningLevel:
+    description: 'The level at which to report any results at, warning or error'
+    required: false
+    default: 'warning'
+  severityConventionLevel:
+    description: 'The level at which to report any results at, warning or error'
+    required: false
+    default: 'warning'
+  severityRefactorLevel:
+    description: 'The level at which to report any results at, warning or error'
+    required: false
+    default: 'warning'
