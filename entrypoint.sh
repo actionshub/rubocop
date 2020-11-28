@@ -1,6 +1,7 @@
 # @params
 # 1. a var with either error or warning
 # 2. Short code for the severity, e.g. F
+echo "::warning ::Github Action: actionshub/rubocop has migrated to the main branch as default, the master branch will be removed"
 enable_matcher() {
 if [ "$1" == "error" ]; then
   echo "##[add-matcher]._actionshub_problem-matchers/rubocop-$2-error.json"
